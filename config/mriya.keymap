@@ -430,10 +430,10 @@
 */
 
             bindings = <
-&trans        &trans  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME                  &kp HOME  &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &kp C_VOL_UP  &kp RGUI
-&trans        &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END                   &kp END   &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &kp C_VOL_DN  &kp RCTRL
-&out OUT_TOG  &trans  &trans          &trans          &trans           &trans                    &trans    &trans       &trans          &trans         &kp C_MUTE    &out OUT_TOG
-                                                      &kp LEFT_GUI     &mo 3     &trans  &trans  &trans    &trans
+&trans          &trans  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME                  &kp F1  &kp F2   &kp F3   &kp F4   &kp C_VOL_UP  &trans
+&kp LEFT_SHIFT  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END                   &kp F5  &kp F6   &kp F7   &kp F8   &kp C_VOL_DN  &trans
+&out OUT_TOG    &trans  &trans          &trans          &trans           &trans                    &kp F9  &kp F10  &kp F11  &kp F12  &kp C_MUTE    &out OUT_TOG
+                                                        &kp LEFT_GUI     &mo 3     &trans  &trans  &trans  &trans
             >;
         };
 
