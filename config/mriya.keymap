@@ -377,7 +377,7 @@
 &kp ESC         &kp Q  &kp W  &kp E  &kp R         &kp T                        &kp Y     &kp U     &kp I      &kp O    &kp P      &kp BACKSLASH
 &mt LCTRL TAB   &kp A  &kp S  &kp D  &kp F         &kp G                        &kp H     &kp J     &kp K      &kp L    &kp COLON  &kp SQT
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V         &kp B                        &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH   &mt RALT GRAVE
-                                     &kp LEFT_GUI  &mo 1  &lt 4 RET  &kp SPACE  &kp BSPC  &kp CAPS
+                                     &kp LEFT_GUI  &mo 1  &lt 0 RET  &kp SPACE  &kp BSPC  &kp CAPS
             >;
         };
 
@@ -430,10 +430,10 @@
 */
 
             bindings = <
-&trans          &trans  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME                  &kp F1  &kp F2   &kp F3   &kp F4   &kp C_VOL_UP  &trans
-&kp LEFT_SHIFT  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END                   &kp F5  &kp F6   &kp F7   &kp F8   &kp C_VOL_DN  &trans
-&out OUT_TOG    &trans  &trans          &trans          &trans           &trans                    &kp F9  &kp F10  &kp F11  &kp F12  &kp C_MUTE    &out OUT_TOG
-                                                        &kp LEFT_GUI     &mo 3     &trans  &trans  &trans  &trans
+&trans          &trans  &kp PAGE_UP             &kp UP_ARROW    &kp PAGE_DOWN      &kp HOME                  &kp F1  &kp F2   &kp F3   &kp F4   &kp C_VOL_UP  &trans
+&kp LEFT_SHIFT  &trans  &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp END                   &kp F5  &kp F6   &kp F7   &kp F8   &kp C_VOL_DN  &trans
+&out OUT_TOG    &trans  &kp LC(LA(LEFT_ARROW))  &trans          &kp LC(LA(RIGHT))  &trans                    &kp F9  &kp F10  &kp F11  &kp F12  &kp C_MUTE    &out OUT_TOG
+                                                                &kp LEFT_GUI       &mo 3     &trans  &trans  &trans  &trans
             >;
         };
 
@@ -458,39 +458,13 @@
 */
 
             bindings = <
-&bootloader  &sys_reset    &none         &studio_unlock  &bt BT_PRV       &bt BT_NXT                    &bt BT_NXT    &kp RA(N8)       &euro         &cprght       &degree       &bootloader
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3     &bt BT_SEL 4                  &bt BT_SEL 4  &bt BT_SEL 3     &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-&kp CAPS     &kp KP_NUM    &kp INS       &kp SLCK        &kp PAUSE_BREAK  &bt BT_PRV                    &bt BT_PRV    &kp PAUSE_BREAK  &kp SLCK      &kp INS       &kp KP_NUM    &kp CAPS
-                                                         &trans           &soft_off     &trans  &trans  &soft_off     &trans
+&bootloader  &trans        &trans        &trans        &bt BT_PRV    &bt BT_NXT                    &trans  &trans  &trans  &trans  &trans  &bootloader
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &kp KP_NUM    &kp INS       &kp SLCK      &trans        &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+                                                       &trans        &soft_off     &trans  &trans  &trans  &trans
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄		
-
-        navi_layer {
-            // ┌────────────────────────────────────────────┐
-
-            label = "NAVI";
-
-            // └────────────────────────────────────────────┘
-            /*
-┌───────┬───────┬───────┬───────┬───────┬───────┐                   ┌───────┬───────┬───────┬───────┬───────┬───────┐
-│       │  BKSP │ PGUP  │  TAB  │ HOME  │  ESC  │                   │  ESC  │ HOME  │  TAB  │ PGUP  │  BKSP │       │
-├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤                      
-│       │   ]   │   ←   │   ↑   │   →   │ ENTER │                   │ ENTER │   ←   │   ↑   │   →   │   [   │       │
-├───────┼───────┼───────┼───────┼───────┼───────┤                   ├───────┼───────┼───────┼───────┼───────┼───────┤
-│       │   `   │ PGDN  │   ↓   │  END  │  DEL  │                   │  DEL  │  END  │   ↓   │ PGDN  │   '   │       │
-└───────┴───────┴───────┴───────┼───────┼───────┼───────┐   ┌───────┼───────┼───────┼───────┴───────┴───────┴───────┘
-                                │       │       │       │   │       │       │       │
-                                └───────┴───────┴───────┘   └───────┴───────┴───────┘  
-*/
-
-            bindings = <
-&none  &kp BSPC       &kp PG_UP      &kp TAB       &kp HOME         &kp ESC                &kp ESC  &kp HOME  &kp TAB   &kp PG_UP  &kp BSPC  &none
-&none  &mt LGUI LBKT  &mt LALT LEFT  &mt LCTRL UP  &mt LSHFT RIGHT  &kp RET                &kp RET  &kp LEFT  &kp UP    &kp RIGHT  &kp RBKT  &none
-&none  &kp GRAVE      &kp PG_DN      &kp DOWN      &kp END          &kp DEL                &kp DEL  &kp END   &kp DOWN  &kp PG_DN  &kp SQT   &none
-                                                   &none            &trans   &none  &none  &trans   &none
-            >;
-        };
     };
 };
