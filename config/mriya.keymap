@@ -271,81 +271,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_grave {
-            timeout-ms = <50>;
-            key-positions = <4 5>;
-            bindings = <&kp GRAVE>;
-        };
-
-        combo_esc_right {
-            timeout-ms = <50>;
-            key-positions = <31 32>;
-            bindings = <&kp ESC>;
-        };
-
-        combo_comma {
-            timeout-ms = <50>;
-            key-positions = <15 16>;
-            bindings = <&numcomma>;
-        };
-
-        combo_dot {
-            timeout-ms = <50>;
-            key-positions = <19 20>;
-            bindings = <&numdot>;
-        };
-
-        combo_esc_left {
-            timeout-ms = <50>;
-            key-positions = <27 28>;
-            bindings = <&kp ESC>;
-        };
-
-        combo_equal {
-            timeout-ms = <50>;
-            key-positions = <3 4>;
-            bindings = <&kp EQUAL>;
-        };
-
-        combo_lsqbracket {
-            timeout-ms = <50>;
-            key-positions = <20 21>;
-            bindings = <&lsqbracket>;
-        };
-
-        combo_rsqbracket {
-            timeout-ms = <50>;
-            key-positions = <32 33>;
-            bindings = <&rsqbracket>;
-        };
-
-        combo_numcomma {
-            timeout-ms = <50>;
-            key-positions = <31 32>;
-            bindings = <&numcomma>;
-        };
-
-        combo_copy {
-            timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&kp LC(C)>;
-        };
-
-        combo_cut {
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            bindings = <&kp LC(X)>;
-        };
-
-        combo_paste {
-            timeout-ms = <50>;
-            key-positions = <14 15>;
-            bindings = <&kp LC(V)>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 };
 
 / {
@@ -354,10 +280,10 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        base_layer {
+        QWERTY {
             // ┌────────────────────────────────────────────┐
 
-            label = "BASE";
+            label = "QWERTY";
 
             // └────────────────────────────────────────────┘
             /*
@@ -374,18 +300,18 @@
 
             bindings = <
 &kp ESC               &kp Q  &kp W  &kp E  &kp R         &kp T                                &kp Y       &kp U      &kp I      &kp O    &kp P          &kp LBKT
-&mt LEFT_SHIFT GRAVE  &kp A  &kp S  &kp D  &kp F         &kp G                                &kp H       &kp J      &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&kp LCTRL             &kp Z  &kp X  &kp C  &kp V         &kp B                                &kp N       &kp M      &kp COMMA  &kp DOT  &kp FSLH       &kp MINUS
-                                           &kp LEFT_GUI  &lt 1 SPACE  &lt 1 SPACE  &lt 2 RET  &lt 4 BSPC  &lt 2 DEL
+&mt LEFT_SHIFT GRAVE  &kp A  &kp S  &kp D  &kp F         &kp G                                &kp H       &kp J      &kp K      &kp L    &kp SEMICOLON  &mt RIGHT_ALT SQT
+&mt LCTRL LEFT_BRACE  &kp Z  &kp X  &kp C  &kp V         &kp B                                &kp N       &kp M      &kp COMMA  &kp DOT  &kp FSLH       &mt RIGHT_CONTROL MINUS
+                                           &kp LEFT_GUI  &lt 2 SPACE  &lt 1 SPACE  &lt 1 RET  &lt 4 BSPC  &lt 2 DEL
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        lower_layer {
+        numbers {
             // ┌────────────────────────────────────────────┐
 
-            label = "LOWER";
+            label = "NUMBERS";
 
             // └────────────────────────────────────────────┘
             /*
@@ -401,10 +327,10 @@
 */
 
             bindings = <
-&kp ESCAPE  &kp N1           &kp N2       &kp N3     &kp N4      &kp N5                           &kp N6          &kp N7         &kp N8        &kp N9                &kp N0                 &kp GRAVE
-&none       &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT                      &kp CARET       &kp AMPERSAND  &kp ASTRK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON
-&kp LSHFT   &kp F12          &kp F6       &kp F5     &kp F4      &kp LG(SPACE)                    &kp BSLH        &lguillement   &rguillement  &lbracket             &rbracket              &kp CARET
-                                                     &lt 3 TAB   &mt LSHFT SPACE  &trans  &trans  &mt RSHFT BSPC  &lt 3 DEL
+&kp ESCAPE    &kp N1           &kp N2       &kp N3     &kp N4      &kp N5                           &kp N6          &kp N7         &kp N8        &kp N9                &kp N0                 &kp GRAVE
+&kp QUESTION  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT                      &kp CARET       &kp AMPERSAND  &kp ASTRK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON
+&kp LSHFT     &kp F12          &kp F6       &kp F5     &kp F4      &kp LG(SPACE)                    &kp BSLH        &lguillement   &rguillement  &lbracket             &rbracket              &kp CARET
+                                                       &lt 3 TAB   &mt LSHFT SPACE  &trans  &trans  &mt RSHFT BSPC  &lt 3 DEL
             >;
         };
 
