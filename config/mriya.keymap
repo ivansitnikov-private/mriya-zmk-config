@@ -278,7 +278,6 @@
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <21 22>;
             timeout-ms = <0>;
-            layers = <0>;
         };
 
         right_parenth {
