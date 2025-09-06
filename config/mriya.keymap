@@ -271,7 +271,32 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        left_parenth {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <21 22>;
+            timeout-ms = <0>;
+            layers = <0>;
+        };
+
+        right_parenth {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <22 23>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <10 11>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <0 1>;
+            layers = <0 1>;
+        };
+    };
 };
 
 / {
@@ -299,10 +324,10 @@
 */
 
             bindings = <
-&kp ESC               &kp Q  &kp W  &kp E  &kp R         &kp T                                &kp Y       &kp U      &kp I      &kp O    &kp P          &kp LBKT
-&mt LEFT_SHIFT GRAVE  &kp A  &kp S  &kp D  &kp F         &kp G                                &kp H       &kp J      &kp K      &kp L    &kp SEMICOLON  &mt RIGHT_ALT SQT
-&mt LCTRL LEFT_BRACE  &kp Z  &kp X  &kp C  &kp V         &kp B                                &kp N       &kp M      &kp COMMA  &kp DOT  &kp FSLH       &mt RIGHT_CONTROL MINUS
-                                           &kp LEFT_GUI  &lt 2 SPACE  &lt 1 SPACE  &lt 1 RET  &lt 4 BSPC  &lt 2 DEL
+&kp GRAVE      &kp Q  &kp W  &kp E  &kp R             &kp T                                &kp Y       &kp U              &kp I      &kp O    &kp P          &kp LBKT
+&mt LCTRL ESC  &kp A  &kp S  &kp D  &mt LEFT_SHIFT F  &kp G                                &kp H       &mt RIGHT_SHIFT J  &kp K      &kp L    &kp SEMICOLON  &mt RIGHT_CONTROL SQT
+&kp LGUI       &kp Z  &kp X  &kp C  &kp V             &kp B                                &kp N       &kp M              &kp COMMA  &kp DOT  &kp FSLH       &kp RIGHT_BRACKET
+                                    &kp LEFT_GUI      &lt 2 SPACE  &lt 1 SPACE  &lt 1 RET  &lt 4 BSPC  &lt 2 DEL
             >;
         };
 
@@ -415,15 +440,6 @@
 &none  &mt LGUI LBKT  &mt LALT LEFT  &mt LCTRL UP  &mt LSHFT RIGHT  &kp RET                &kp RET  &kp LEFT  &kp UP    &kp RIGHT  &kp RBKT  &none
 &none  &kp GRAVE      &kp PG_DN      &kp DOWN      &kp END          &kp DEL                &kp DEL  &kp END   &kp DOWN  &kp PG_DN  &kp SQT   &none
                                                    &none            &trans   &none  &none  &trans   &none
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
