@@ -267,6 +267,40 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+
+        mac_comma: new_macro {
+            compatible = "zmk,behavior-macro";
+            label = "NEW_MACRO";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N4 &kp KP_N6>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
+        mac_dot: new_macro {
+            compatible = "zmk,behavior-macro";
+            label = "NEW_MACRO";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N4 &kp KP_N4>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
     };
 };
 
@@ -301,11 +335,11 @@
         combo_numcomma {
             timeout-ms = <50>;
             key-positions = <31 30>;
-            bindings = <&numcomma>;
+            bindings = <&mac_comma>;
         };
 
         numdot {
-            bindings = <&numdot>;
+            bindings = <&mac_dot>;
             key-positions = <28 29>;
         };
     };
