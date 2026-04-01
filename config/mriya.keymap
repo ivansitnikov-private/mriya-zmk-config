@@ -280,30 +280,6 @@
             bindings = <&kp GRAVE>;
         };
 
-        combo_esc_right {
-            timeout-ms = <50>;
-            key-positions = <31 32>;
-            bindings = <&kp ESC>;
-        };
-
-        combo_comma {
-            timeout-ms = <50>;
-            key-positions = <15 16>;
-            bindings = <&numcomma>;
-        };
-
-        combo_dot {
-            timeout-ms = <50>;
-            key-positions = <19 20>;
-            bindings = <&numdot>;
-        };
-
-        combo_esc_left {
-            timeout-ms = <50>;
-            key-positions = <27 28>;
-            bindings = <&kp ESC>;
-        };
-
         combo_equal {
             timeout-ms = <50>;
             key-positions = <3 4>;
@@ -347,8 +323,13 @@
         };
 
         none {
-            bindings = <&none>;
-            key-positions = <0 1>;
+            bindings = <&kp DOT>;
+            key-positions = <28 29>;
+        };
+
+        comma {
+            bindings = <&kp COMMA>;
+            key-positions = <30 31>;
         };
     };
 };
