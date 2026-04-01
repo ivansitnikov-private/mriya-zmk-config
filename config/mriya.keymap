@@ -300,36 +300,13 @@
 
         combo_numcomma {
             timeout-ms = <50>;
-            key-positions = <31 32>;
+            key-positions = <31 30>;
             bindings = <&numcomma>;
         };
 
-        combo_copy {
-            timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&kp LC(C)>;
-        };
-
-        combo_cut {
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            bindings = <&kp LC(X)>;
-        };
-
-        combo_paste {
-            timeout-ms = <50>;
-            key-positions = <14 15>;
-            bindings = <&kp LC(V)>;
-        };
-
-        none {
-            bindings = <&kp DOT>;
+        numdot {
+            bindings = <&numdot>;
             key-positions = <28 29>;
-        };
-
-        comma {
-            bindings = <&kp COMMA>;
-            key-positions = <30 31>;
         };
     };
 };
