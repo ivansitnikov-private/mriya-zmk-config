@@ -297,17 +297,6 @@
             key-positions = <32 33>;
             bindings = <&rsqbracket>;
         };
-
-        combo_numcomma {
-            timeout-ms = <50>;
-            key-positions = <31 30>;
-            bindings = <&mac_comma>;
-        };
-
-        combo_numdot {
-            bindings = <&mac_dot>;
-            key-positions = <28 29>;
-        };
     };
 };
 
