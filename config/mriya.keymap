@@ -334,7 +334,7 @@
             bindings = <&mac_comma>;
         };
 
-        numdot {
+        combo_numdot {
             bindings = <&mac_dot>;
             key-positions = <28 29>;
         };
