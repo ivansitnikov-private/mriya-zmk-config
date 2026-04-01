@@ -345,6 +345,11 @@
             key-positions = <14 15>;
             bindings = <&kp LC(V)>;
         };
+
+        capitalise {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <0 1>;
+        };
     };
 };
 
