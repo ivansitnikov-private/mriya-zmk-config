@@ -286,18 +286,6 @@
             bindings = <&kp ESC>;
         };
 
-        combo_comma {
-            timeout-ms = <50>;
-            key-positions = <15 16>;
-            bindings = <&numcomma>;
-        };
-
-        combo_dot {
-            timeout-ms = <50>;
-            key-positions = <19 20>;
-            bindings = <&numdot>;
-        };
-
         combo_esc_left {
             timeout-ms = <50>;
             key-positions = <27 28>;
@@ -320,12 +308,6 @@
             timeout-ms = <50>;
             key-positions = <32 33>;
             bindings = <&rsqbracket>;
-        };
-
-        combo_numcomma {
-            timeout-ms = <50>;
-            key-positions = <31 32>;
-            bindings = <&numcomma>;
         };
 
         capitalise {
