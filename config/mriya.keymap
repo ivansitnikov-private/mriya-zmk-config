@@ -345,7 +345,7 @@
 */
 
             bindings = <
-&kp RBKT   &kp Q        &kp W       &kp E               &kp R        &kp T                                 &kp Y       &kp U        &kp I                &kp O       &kp P                   &kp LBKT
+&kp RBKT   &kp Q        &kp W       &kp E               &kp R        &mt COMMA T                           &mt DOT Y   &kp U        &kp I                &kp O       &kp P                   &kp LBKT
 &kp GRAVE  &mt LCTRL A  &mt LALT S  &mt LEFT_COMMAND D  &mt LSHFT F  &kp G                                 &kp H       &mt RSHFT J  &mt RIGHT_COMMAND K  &mt RALT L  &mt RIGHT_CONTROL SEMI  &kp SQT
 &kp BSLH   &kp Z        &kp X       &kp C               &kp V        &kp B                                 &kp N       &kp M        &kp COMMA            &kp DOT     &kp FSLH                &kp MINUS
                                                         &to 2        &lt 2 DELETE  &lt 1 RET  &lt 1 SPACE  &lt 3 BSPC  &to 1
